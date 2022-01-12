@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e9feff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-container {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 5px solid #222;
+    background: rgba(255, 255, 255, .7);
+    position: relative;
+}
+
+.clock-container .number {
+    --rotation: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    left: 0;
+    transform: rotate(var(--rotation));
+}
+
+.clock-container .number-1 {
+    --rotation: 30deg;
+}
+
+.clock-container .number-2 {
+    --rotation: 60deg;
+}
+
+.clock-container .number-3 {
+    --rotation: 90deg;
+}
+
+.clock-container .number-4 {
+    --rotation: 120deg;
+}
+
+.clock-container .number-5 {
+    --rotation: 150deg;
+}
+
+.clock-container .number-6 {
+    --rotation: 180deg;
+}
+
+.clock-container .number-7 {
+    --rotation: 210deg;
+}
+
+.clock-container .number-8 {
+    --rotation: 240deg;
+}
+
+.clock-container .number-9 {
+    --rotation: 270deg;
+}
+
+.clock-container .number-10 {
+    --rotation: 300deg;
+}
+
+.clock-container .number-11 {
+    --rotation: 330deg;
+}
+
+.clock-container .number-12 {
+    --rotation: 360deg;
+}
+
+.clock-container .hand {
+    --rotation: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    border-radius: 10px 10px 0 0;
+    transform-origin: bottom;
+}
+
+.clock-container .hour-hand {
+    width: 17px;
+    height: 28%;
+    background: #111;
+}
+
+.clock-container .minute-hand {
+    width: 10px;
+    height: 34%;
+    background: #555;
+}
+
+.clock-container .second-hand {
+    width: 7px;
+    height: 40%;
+    background: #e63232;
+}
+
+.clock-container::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
